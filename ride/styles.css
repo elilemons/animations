@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+#car {
+  animation: car 1s ease-out;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes car {
+  from {
+    transform: scale(0.25);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+#woman {
+  animation: woman 1s ease-out;
+  transform: translateX(-50px);
+  animation-fill-mode: forwards;
+}
+
+@keyframes woman {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(-50px);
+  }
+}
+
+#checkmark {
+  opacity: 0;
+  animation: checkmark 1s linear;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation-fill-mode: forwards;
+}
+
+@keyframes checkmark {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotateZ(0deg);
+  }
+  75% {
+    opacity: 100;
+    transform: scale(1.25) rotateZ(360deg);
+  }
+
+  100% {
+    opacity: 100;
+    transform: scale(1) rotateZ(360deg);
+  }
+}
